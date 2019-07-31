@@ -1,4 +1,4 @@
-# Final Task Front End [Epam Online Course]
+## Final Task Front End [Epam Online Course]
 ===========================================
-### HTML5 / CSS3 / JavaScript
+#### HTML5 / CSS3 / JavaScript
 
