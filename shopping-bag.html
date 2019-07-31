@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>SH - Shopping Bag</title>
+</head>
+
+<body>
+    <div id="body-wrap">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="home.html">SH</a>
+                </div>
+                <div class="search-wrap">
+                    <form action="#">
+                        <label for="search"></label>
+                        <input type="search" class="search" id="search" placeholder="Search something...">
+                    </form>
+                    <a href="shopping-bag.html">
+                        <span class="basket">
+                            <span><img src="img/icons/shopping-bag.png" alt=""></span>
+                            Basket(<span>0</span>)
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <nav class="nav-wrap">
+                <ul>
+                    <li><a href="category-all.html?cg=woman">Woman</a></li>
+                    <li><a href="category-all.html?cg=men">Men</a></li>
+                    <li><a href="category-all.html?cg=kids">Kids</a></li>
+                    <li><a href="category-all.html?cg=coming_soon">Coming Soon</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr>
+        <main>
+            <div class="breadcrumbs">
+                <ul>
+                    <li>
+                        <a href="home.html">HOME</a><span> /</span>
+                    </li>
+                    <li class="category">
+                        <a href="category-all.html">CATEGORY ALL</a><span> /</span>
+                    </li>
+                    <li class="sub-category">
+                        <a href="#">COAT</a><span> /</span>
+                    </li>
+                    <li class="product-basket">
+                        <a href="#">BASKET</a>
+                    </li>
+                </ul>
+            </div>
+            <section class="shopping-cart">
+                <h2>YOUR SHOPPING BAG</h2>
+                <p class="shopping-cart-subheader">Items reserved for limited time only</p>
+                <div class="shopping-cart-table-wrap">
+                    <table class="shopping-cart-table">
+                        <thead>
+                            <tr class="labels">
+                                <td>PRODUCT</td>
+                                <td>DESCRIPTION</td>
+                                <td>COLOR</td>
+                                <td>SIZE</td>
+                                <td>QTY</td>
+                                <td>AMOUNT</td>
+                                <td>DELETE</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="product-detail-row">
+                                <td>
+                                    <div class="product-thumbnail">
+                                        <img src="img/thumbnails/coat_1.png" alt="Coat">
+                                    </div>
+                                </td>
+                                <td class="p-description">
+                                    <span class="name">GOSLING QUILTED COAT</span>
+                                    <br> <span class="ref">Ref. 1455</span>
+                                </td>
+                                <td class="p-color">
+                                    <span class="color">Blue</span>
+                                </td>
+                                <td class="p-size">
+                                    <span class="size">L</span>
+                                </td>
+                                <td class="p-qty">
+                                    <input id="quantity-1" type="number" min="1" value="1">
+                                </td>
+                                <td class="p-amount">
+                                    &dollar;<span id="amount-1">175.95</span>
+                                </td>
+                                <td class="p-del">
+                                    <span>&times;</span>
+                                </td>
+                            </tr>
+
+                            <tr class="product-detail-row">
+                                <td>
+                                    <div class="product-thumbnail">
+                                        <img src="img/thumbnails/coat_2_1.png" alt="Coat">
+                                    </div>
+                                </td>
+                                <td class="p-description">
+                                    <span class="name">PRAINDANCE</span>
+                                    <br><span class="ref">Ref. 1456</span>
+                                </td>
+                                <td class="p-color">
+                                    <span class="color">Multi Color</span>
+                                </td>
+                                <td class="p-size">
+                                    <span class="size">M</span>
+                                </td>
+                                <td class="p-qty">
+                                    <input id="quantity-2" type="number" min="1" value="1">
+                                </td>
+                                <td class="p-amount">
+                                    &dollar;<span id="amount-2">149.95</span>
+                                </td>
+                                <td class="p-del">
+                                    <span>&times;</span>
+                                </td>
+                            </tr>
+                            <tr class="product-detail-row">
+                                <td>
+                                    <div class="product-thumbnail">
+                                        <img src="img/thumbnails/coat_3_3.png" alt="Coat">
+                                    </div>
+                                </td>
+                                <td class="p-description">
+                                    <span class="name">KINNAIRD PADDED</span>
+                                    <br><span class="ref">Ref. 1457</span>
+                                </td>
+                                <td class="p-color">
+                                    <span class="color">Pink Green</span>
+                                </td>
+                                <td class="p-size">
+                                    <span class="size">S</span>
+                                </td>
+                                <td class="p-qty">
+                                    <input id="quantity-3" type="number" min="1" value="1">
+                                </td>
+                                <td class="p-amount">
+                                    &dollar;<span id="amount-3">199.95</span>
+                                </td>
+                                <td class="p-del">
+                                    <span>&times;</span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Subtotal:</td>
+                                <td class="shopping-cart-total"><span>0</span> &dollar;</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </section>
+            <div class="product-order">
+                <span class="continue-shopping"><a href="category-all.html?cg=men">Continue Shopping</a></span>
+                <span><a href="thank-you.html" class="order-button">ORDER NOW</a></span>
+            </div>
+        </main>
+        <footer>
+            <div class="collection">
+                <h3>COLLECTION</h3>
+                <ul>
+                    <li><a href="category-all.html?cg=woman">Woman</a></li>
+                    <li><a href="category-all.html?cg=men">Men</a></li>
+                    <li><a href="category-all.html?cg=kids">Kids</a></li>
+                    <li><a href="category-all.html?cg=coming_soon">Coming Soon</a></li>
+                </ul>
+            </div>
+            <div class="site">
+                <h3>SITE</h3>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Copyright Policy</a></li>
+                    <li><a href="#">Press Kit</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="shop">
+                <h3>SHOP</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Shipping Methods</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <h3>SOCIAL</h3>
+                <p>Shoper is made with love in Warsaw.</p>
+                <p>2014 &copy; All rights reserved. El Passion</p>
+                <ul>
+                    <li>
+                        <a href="#"><span><img src="img/icons/twitter-logo.png" alt="twiter"></span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span><img src="img/icons/facebook-logo.png" alt="facebook"></span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span><img src="img/icons/instagram-logo.png" alt="instagram"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <script src="js/main.js"></script>
+    </div>
+
+</body>
+
+</html>
