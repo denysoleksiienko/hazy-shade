@@ -1,3 +1,4 @@
-# hazy-shade
-Final Project Front End [Epam Online Course]
-HTML5 / CSS3 / JavaScript
+# Final Task Front End [Epam Online Course]
+===========================================
+### HTML5 / CSS3 / JavaScript
+
