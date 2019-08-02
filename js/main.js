@@ -9,6 +9,22 @@ if (sizes) {
 }
 /*END BUTTONS SIZES SELECT */
 
+
+/* SWITCH PHOTO */
+let mainPhoto, thumbnails = [], thumbnailsSrc = [];
+function switchPhoto(e){
+  let mainPhotoSrc = mainPhoto.children[0].src;  
+  mainPhoto.children[0].setAttribute('src', e.target.src);
+  e.target.src = mainPhotoSrc;
+}
+mainPhoto = document.querySelector('.product-big');
+thumbnails = document.getElementsByClassName('product-thumbnail');
+for (i = 0; i < thumbnails.length; i++) {
+  thumbnails[i].addEventListener('click', switchPhoto);
+}
+
+/* END SWITCH PHOTO */
+
 /* QTY INPUT ONCHANGE FOR PRICE */
 const input = document.getElementById('quantity-1');
 if (input) {
