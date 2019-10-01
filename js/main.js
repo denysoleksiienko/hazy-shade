@@ -1,36 +1,40 @@
 /* BUTTONS SIZES SELECT */
-const sizes = document.querySelector(".sizes");
+let sizes = document.querySelector('.sizes');
 if (sizes) {
-  sizes.addEventListener('click', (e) => {
-    if (e.target.tagName != "UL") {
-      e.target.className == "size-selected" ? e.target.className = "" : e.target.className = "size-selected";
+  sizes.addEventListener('click', event => {
+    if (event.target.tagName != "UL") {
+      Array.from(sizes.querySelectorAll('.size-selected')).forEach(select => {
+        select.classList.remove('size-selected');
+      });
+      event.target.classList.add('size-selected');
     }
-  })
+  });
 }
 /*END BUTTONS SIZES SELECT */
 
 
 /* SWITCH PHOTO */
-let mainPhoto, thumbnails = [], thumbnailsSrc = [];
-function switchPhoto(e){
-  let mainPhotoSrc = mainPhoto.children[0].src;  
-  mainPhoto.children[0].setAttribute('src', e.target.src);
-  e.target.src = mainPhotoSrc;
+let mainPhoto, thumbnails = [],
+  thumbnailsSrc = [];
+
+function switchPhoto(event) {
+  let mainPhotoSrc = mainPhoto.children[0].src;
+  mainPhoto.children[0].setAttribute('src', event.target.src);
+  event.target.src = mainPhotoSrc;
 }
 mainPhoto = document.querySelector('.product-big');
-thumbnails = document.getElementsByClassName('product-thumbnail');
-for (i = 0; i < thumbnails.length; i++) {
-  thumbnails[i].addEventListener('click', switchPhoto);
-}
-
+thumbnails = document.querySelectorAll('.product-thumbnail');
+thumbnails.forEach(item => {
+  item.addEventListener('click', switchPhoto);
+});
 /* END SWITCH PHOTO */
 
 /* QTY INPUT ONCHANGE FOR PRICE */
-const input = document.getElementById('quantity-1');
+const input = document.querySelector('#quantity-1');
 if (input) {
   input.addEventListener('change', () => {
     document.getElementById('amount-1').innerHTML = parseFloat(input.value * 175.95).toFixed(2);
-  })
+  });
 }
 
 const input2 = document.getElementById('quantity-2');
@@ -77,7 +81,11 @@ let multiItemSlider = (function () {
 
     // push in an array
     sliderItems.forEach((item, index) => {
-      items.push({ item: item, position: index, transform: 0 });
+      items.push({
+        item: item,
+        position: index,
+        transform: 0
+      });
     });
 
     let position = {
@@ -145,4 +153,4 @@ let multiItemSlider = (function () {
 }());
 
 let slider = multiItemSlider('.slider')
-  /*END SLIDER*/
+/*END SLIDER*/
